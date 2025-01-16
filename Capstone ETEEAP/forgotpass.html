@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETEEAP Tracking System</title>
+  <style>
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Poppins, sans-serif;
+    }
+
+    .register-page {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      padding-bottom: 78px;
+    }
+
+    .background-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      background-color: #fff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      z-index: 10;
+    }
+
+    .logo-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .logo-primary {
+      aspect-ratio: 1.02;
+      object-fit: contain;
+      width: 49px;
+      border-radius: 50%;
+    }
+
+    .logo-secondary {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 55px;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      color: #4C308F;
+    }
+
+    .university-name {
+      color: #002AB4;
+    }
+
+    .institute-name {
+      color: #482C8D;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      font-weight: 700;
+      color: #4C308F;
+    }
+
+    .nav-item {
+		white-space: nowrap;
+		cursor: pointer;
+		text-decoration: none; /* Removes underline */
+		color: #482C8D; /* Matches the color of .university-title */
+	}
+
+	.nav-item:hover {
+		color: #351F6A; /* Optional: Darker shade for hover effect */
+	}
+
+    .banner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      gap: 20px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .banner-logo {
+	  width: 100px;
+	  height: auto;
+	  background: none; /* Ensure no background is applied */
+	  box-shadow: none; /* Remove any shadow if unnecessary */
+	}
+
+    .banner-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .system-title {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    .university-title {
+      font-size: 30px;
+      font-family: 'Poltawski Nowy', sans-serif;
+    }
+
+    .forgot-password-form-container {
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
+      width: 90%;
+      max-width: 400px;
+      padding: 25px;
+      color: #4C308F;
+      margin: 20px 0;
+    }
+
+    .forgot-password-heading {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-top: 20px;
+    }
+
+    .form-input {
+      border-radius: 6px;
+      background-color: #fdfdfd;
+      margin-top: 8px;
+      color: #bcbcbc;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .reset-button {
+      background-color: #4C308F;
+      color: white;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .forgot-password-form-container {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .banner-logo {
+        width: 80px;
+      }
+
+      .system-title {
+        font-size: 28px;
+      }
+
+      .university-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register-page">
+    <div class="page-container">
+      <img class="background-image" src="background.png" alt="Background Image" loading="lazy" />
+    
+      <header class="header-container">
+        <div class="logo-container">
+          <img class="logo-primary" src="rtulogo.png" alt="RTU Logo" loading="lazy" />
+          <img class="logo-secondary" src="ifldelogo.png" alt="IFLeD Logo" loading="lazy" />
+          <div class="header-text">
+            <div class="university-name">Rizal Technological University</div>
+            <div class="institute-name">Institute of Flexible Learning & Digital Education</div>
+          </div>
+        </div>
+        <nav class="nav-menu">
+          <a href="#" class="nav-item">Home</a>
+          <a href="aboutus.html" class="nav-item">About Us</a>
+          <a href="#" class="nav-item">Downloads</a>
+          <a href="#" class="nav-item">Services</a>
+          <a href="#" class="nav-item">News</a>
+        </nav>
+      </header>
+
+      <div class="banner-container">
+		<img class="banner-logo" src="rizal-technological-university-logo.png" alt="ETEEAP Logo" loading="lazy" />
+		<div class="banner-text">
+		<h1 class="system-title">ETEEAP Tracking System</h1>
+		<h2 class="university-title">Rizal Technological University</h2>
+		</div>
+	</div>
+
+      <form class="forgot-password-form-container" action="#" method="POST">
+        <h3 class="forgot-password-heading">Forgot Password</h3>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required />
+        </div>
+
+        <button type="submit" class="reset-button">Reset Password</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
